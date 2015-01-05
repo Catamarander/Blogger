@@ -13,4 +13,14 @@
   <li>
     <%= link_to "<< Back to Articles List", articles_path %>
   </li>
+  <li>
+    <h3>Comments (<%= @article.comments.size %>)</h3>
+    <%= render partial: 'articles/comment', collection: @article.comments %>
+  </li>
+  <li>
+    <%= render partial: 'comments/form' %>
+  </li>
+  <li>
+    <%= link_to "<< Back to Articles List", articles_path %>
+  </li>
 </ul>
